@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        console.log('Hello')
+        console.log('Welcome')
+
+        //keywords and variables
+        //var,let,const
+
+        //var
+        //declaration   var age;
+        //initialization    age=20;
+        var age=20;
+        
+        //re-initialization
+        age=30;
+        //re-declaration
+        var age=40;
+        console.log("age: ",age);
+
+        //let
+        let course="Mern";
+        course="dsa"
+        //cannot re-declaration        let course="dsa";
+        console.log('course: ',course);
+
+        //const
+        const pan="SFEINV234";
+        // cannot re-initialization and re-declaration       pan="DGHBESF342";  const pan;
+        console.log("pan: ",pan);
+
+
+        let username='admin1'
+        let password=123
+        if(username=='admin1' && password==123){
+            console.log('login success')
+        }else{
+            console.log('login failed')
+        }
+
+        
+        //function
+        function student(name,clg='sece'){
+            console.log(`Hello ${name} welcome to ${clg} college`);
+        }
+        student('arun')
+        student('kumar')
+        student('yoges')
+
+
+
+
+        //Employee
+        function Employee(Name,empid,comp='Microsoft'){
+            console.log(`Employee Name: ${Name} Employee Id: ${empid} Company: ${comp}`);
+        }
+        Employee('Ram',143)
+        Employee('Raj',156)
+        Employee('Ragu',196)
+
+
+
+        //function in datatype
+        let data1=function(){
+            return 'Hello Employee'
+        }
+        console.log(data1());
+
+        //arrow function
+        let mult1=()=>{
+            return 'Arrow function'
+        }
+        console.log(mult1())
+
+        //arrow function with parameters
+        let mult=(a,b)=>{
+            return a*b
+        }
+        console.log(mult(2,4))
+
+
+
+        //in function passing the another function as an argument
+        function sece(callback){
+            console.log('Welcome to sece');
+            callback()
+        }
+        function stud(){
+            console.log('Students!')
+        }
+        sece(stud)
+
+        //example
+        function whatsapp(callback){
+            console.log('Welcome to Whatsapp');
+            callback()
+        }
+        function notification(){
+            console.log('Notification!');
+        }
+        whatsapp(notification)
+
+
+        //promise
+        //resolve,reject fullfilled
+        let fetch_api=new Promise((resolve,reject)=>{
+            let api=false;
+            if(api){
+            resolve('fetched api')
+        }else{
+            setTimeout(()=>{
+                reject('failed to fetch api data')
+            },2000)
+        }
+            
+        })
+        console.log(fetch_api)
+
+
+    </script>
+</body>
+</html>
